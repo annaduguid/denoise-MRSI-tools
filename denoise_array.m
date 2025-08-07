@@ -101,7 +101,7 @@ elseif strcmp(method,'SpinSVD')
     end
     
     if mod(data_size(4),data_size(5)) ~= 0
-        error('Input FID size (%d) must be divisible by nReps (%d).',data_size(4),data_size(5))
+        error('Input FID size (%d) must be divisible by N_t (%d).',data_size(4),data_size(5))
     end
     
     Input = reshape(X,[data_size(1)*data_size(2)*data_size(3)*FIDptsPerCol data_size(4)*data_size(5)/FIDptsPerCol]);
